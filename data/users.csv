@@ -1,0 +1,5 @@
+email,name,role,password,farm_code
+owner@salst.test,Test Farm Owner,owner,SalstOwner2026!,SALST-FARM-01
+manager@salst.test,Test Farm Manager,manager,SalstManager2026!,SALST-FARM-01
+worker1@salst.test,Farm Worker One,worker,SalstWorker2026!,SALST-FARM-01
+worker2@salst.test,Farm Worker Two,worker,SalstWorker2026!,SALST-FARM-01

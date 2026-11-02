@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: salst-pwa
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/init_db.py && gunicorn --chdir backend server:app --bind 0.0.0.0:$PORT --workers 2 --timeout 90
+    healthCheckPath: /api/health
+    envVars:
+      - key: SALST_DATABASE_URL
+        sync: false
+      - key: SALST_INGEST_KEY
+        generateValue: true
+      - key: SALST_SESSION_SECRET
+        generateValue: true
+      - key: SALST_HTTPS
+        value: "1"
